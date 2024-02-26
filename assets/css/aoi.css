@@ -1,0 +1,80 @@
+/* body */
+body{font-size:var(--base-font-size);line-height:var(--base-line-height);font-family:var(--base-font-family);}
+
+/* ヘッダー アイコン */
+.header-title-img{display:inline-block;margin:-.25em 0 -.375em;width:1.5em;height:1.5em;background:no-repeat 50%;background-size:contain;background-image:var(--profile-image);}
+
+/* 記事一覧 記事 */
+.date-outer{margin:1em 0;}
+
+/* 見出し 日付 */
+.date-header span{font-size:1.15em;}
+/* 見出し タイトル */
+h3.post-title,.comments h4{margin:.25em -4px 0;padding:.25em 0 .25em .375em;border-left:4px solid #a0c4fc;background-image:linear-gradient(to right,rgba(160,196,252,.25) 25%,transparent);font-size:1.75em;font-family:var(--base-font-family);font-weight:normal;line-height:1.25;}
+
+/* 本文 見出し */
+.post-body h1,.post-body h2,.post-body h3,.post-body h4{margin-top:1.75em;color:#4d5766;}
+.post-body :nth-child(1){margin-top:.25em;}
+/* 本文 見出し + p */
+.post-body h1 + p,.post-body h2 + p,.post-body h3 + p,.post-body h4 + p{margin-top:0;}
+
+/* 記事 footer */
+.post-footer{background-image:linear-gradient(rgba(0,0,0,0),rgba(24,24,24,.05));}
+</style>
+
+<style id='aoi-css-parts'>
+/* ドラッグスクロール */
+.aoi-dragscroll{overflow-x:scroll!important;scrollbar-width:none;-ms-overflow-style:none;}
+.aoi-dragscroll::-webkit-scrollbar{display:none;}
+
+/* ノート */
+.post-body .note{display:inline-block;background:rgb(232,239,249);border:2px dotted rgb(204,204,204);margin:.5em .25em;padding:1em;border-radius:8px;}
+  
+/* button */
+.button{border-radius:4px;display:block;font-size:1.15em;font-weight:bold;height:1.75em;line-height:1.75;margin:.75em auto;padding-top:.075em;max-width:460px;text-align:center;width:90%;background-image:linear-gradient(rgba(24,24,24,.025),rgba(24,24,24,.075));color:#404040;}
+/* submit */
+.button.submit{background-color:#1c6ddf;color:white;font-size:1.2em;height:2.5em;line-height:2.5;}
+/* button size */
+.button.s-small{height:1.4em;line-height:1.4em;}
+.button.s-medium{height:2em;line-height:2em;}
+.button.s-large{height:2.5em;line-height:2.5em;}
+.button.w-auto{max-width:none;width:auto;}
+.button.w-066{max-width:640px;width:66.6%;}
+.button.w-075{max-width:720px;width:75%;}
+.button.w-100{max-width:880px;width:100%;}
+.button.center{max-width:480px;text-align:center;width:50%;}
+/* button color */
+.button.c-blue{background-color:#408cff;color:white;}
+.button.c-deepblue{background-color:#185cc0;color:white;}
+
+/* ニコニコ iframe */
+iframe[src*=&quot;//ext.nicovideo.jp/&quot;]{border:solid 1px #ccc;width:312px;height:172px;}
+
+/* $setconf */
+:root{
+  --base-font-size:10pt;
+  --base-font-family:&quot;Helvetica Neue&quot;,&quot;ヒラギノ角ゴ Pro W3&quot;,&quot;Hiragino Kaku Gothic Pro&quot;,&quot;Segoe UI&quot;,Meiryo,メイリオ,sans-serif;
+  --base-line-height:1.3;
+  
+  --header-text-color:#3069bf;
+  --header-text-size:24pt;
+  --m-header-text-size:18pt;
+  --header-text-color:#1d7ccc;
+  
+  --content-font-size:1.1em;
+  
+  --content-head-text-color:#336fcc;
+  --content-head-margin:1.75em 0 .25em;
+  --content-h1-font-size:2.25em;
+  --content-h2-font-size:2em;
+  --content-h3-font-size:1.75em;
+  --content-h4-font-size:1.4em;
+  --content-h5-font-size:1.2em;
+  --content-h6-font-size:1.05em;
+}
+
+
+/* アイコン */
+.icon_new{display:inline-block;margin:0 1px -1px 1px;width:32px;height:12px;background-image:url(&quot;//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6syhyphenhyphenD7W0sHp_GwVvivbGImrvuur9PYpkwXxeOJab0Op9zxom2keI8mPvWwpwF4JlaA0LDjNr8aew64I-lAJkHdgQvvbxgbIBPresDJpDuEzLJLQJW2vjCfsBvL7UAN3_HVQEqFrYcovB9MN3zC4Anc6BOAzqU93jUJt48hxmCGQB-7j4SGxGO9FP7WQ/s1600-rw/icon_new.gif&quot;);}
+.icon_push{display:inline-block;margin:0 1px 0 1px;width:27px;height:10px;background-image:url(&quot;//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEr5YH0hkHTmFxy9stHWHPxjKgExsY9w4fwI6v0fvvEugoKrJUsKN6HzNXmLjOUTRiKqueRZ7zFdNtmqxxLHblXZEa4rYQCys2u434G_XFI5kWYj-tjzYhi3G5dO0WXnVgY6dRTbgRnZdvlP4kjxuMvKuomtz-UcnSBkp_ZwhweSNNfU2MZdhZj8Gk3NI/s1600-rw/icon_push.gif&quot;);}
+.icon_check{display:inline-block;margin:0 2px 1px 0;width:20px;height:7px;background-image:url(&quot;//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPNPZ6lhm8sJN33rNJyJTA4bwDQHVX988MOJGlD8HWZewRl_f9TsSmuMxZZa3W-EFaNmoLPZKqwPiGFbd0uJ2BbSuXgwRHHURHkR_lIW0lhg6hqxLLFJRO6Xph4sfVH0WKdAj3veh3s9W-GU-YwkGudKvLd4LTQgOTdYIrJ-eYI8Jzg8FPUOHsUxy_SZA/s1600-rw/icon_check.gif&quot;);}
