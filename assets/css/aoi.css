@@ -107,14 +107,14 @@ iframe[src*=&quot;//ext.nicovideo.jp/&quot;]{border:solid 1px #ccc;width:312px;h
 
 
 /* $アイコン */
-[class*=icon_]{display:inline-block;width:16px;height:16px;margin:0 0 0 0;background-size:100% 100%;}
-.icon_new{margin:0 1px -1px 1px;width:32px;height:12px;background-image:url("//mabechinr.github.io/mabechinr/assets/icon/icon_new.gif");}
-.icon_push{margin:0 1px 0 1px;width:27px;height:10px;background-image:url("//mabechinr.github.io/mabechinr/assets/icon/icon_push.gif");}
-.icon_check{margin:0 2px 1px 0;width:20px;height:7px;background-image:url("//mabechinr.github.io/mabechinr/assets/icon/icon_check.gif");}
+[class*=icon_]{display:inline-block;width:16px;height:16px;margin:0 0 -2px 0;background-size:100% 100%;}
+.icon_new{margin:2px 1px 0 1px;width:32px;height:12px;background-image:url("//mabechinr.github.io/mabechinr/assets/icon/icon_new.gif");}
+.icon_push{margin:0 1px 2px 1px;width:26px;height:9px;background-image:url("//mabechinr.github.io/mabechinr/assets/icon/icon_push.gif");}
+.icon_check{margin:0 2px 2px 0;width:20px;height:7px;background-image:url("//mabechinr.github.io/mabechinr/assets/icon/icon_check.gif");}
 
 .icon_utau,.icon_openutau{background-image:url("//mabechinr.github.io/mabechinr/assets/icon/openutau_icon.svg");}
 .icon_aivoice,.icon_aiv{background-image:url("//mabechinr.github.io/mabechinr/assets/icon/aivoice_icon.svg");}
-.icon_aiv2{background-image:url("//mabechinr.github.io/mabechinr/assets/icon/aivoice2_icon.svg");}
+.icon_aivoice2,.icon_aiv2{background-image:url("//mabechinr.github.io/mabechinr/assets/icon/aivoice2_icon.svg");}
 .icon_voiceroid,.icon_voiro{background-image:url("//mabechinr.github.io/mabechinr/assets/icon/voiceroid_icon.svg");}
 .icon_neutrino,.icon_nt{background-image:url("//mabechinr.github.io/mabechinr/assets/icon/neutrino_icon.svg");}
 .icon_aitalk,.icon_ksync{background-image:url("//mabechinr.github.io/mabechinr/assets/icon/aitalk_icon.svg");}
