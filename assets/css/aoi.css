@@ -50,6 +50,7 @@ h3.post-title,.comments h4{margin:.25em -4px 0;padding:.25em 0 .25em .375em;bord
 /* ニコニコ iframe */
 iframe[src*=&quot;//ext.nicovideo.jp/&quot;]{border:solid 1px #ccc;width:312px;height:172px;}
 
+
 /* $setconf */
 :root{
   --base-font-size:10pt;
@@ -71,6 +72,37 @@ iframe[src*=&quot;//ext.nicovideo.jp/&quot;]{border:solid 1px #ccc;width:312px;h
   --content-h4-font-size:1.4em;
   --content-h5-font-size:1.2em;
   --content-h6-font-size:1.05em;
+}
+
+
+/* $レスポンシブ */
+@media (max-width:1080px){
+  body{min-width:auto;}
+}
+
+@media (max-width:1023px){
+  .main-inner .columns{padding-right:0;}
+  .main-inner .fauxcolumn-center-outer{right:0;}
+  .main-inner .column-center-inner{padding:0 .75em;}
+  .main-inner .column-right-outer{width:auto;margin-right:0;}
+  .main-inner .fauxcolumn-right-outer{width:0;}
+}
+
+@media (max-width:800px){
+  body{padding:0 1.5em 1.5em;}
+  .content-inner{padding-top:.5em;}
+  .main-inner .column-center-inner{padding:0 .5em;}
+}
+
+@media (max-width:640px){
+  body{padding:0 1em 1.25em;}
+  .main-inner .column-center-inner{padding:0 .5em;}
+  .section{margin:0 .75em;}
+}
+
+@media (max-width:560px){
+  body{padding:0 .5em 1em;}
+  .main-inner .column-center-inner{padding:0 .5em;}
 }
 
 
