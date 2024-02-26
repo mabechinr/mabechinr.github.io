@@ -22,7 +22,7 @@ h3.post-title,.comments h4{margin:.25em -4px 0;padding:.25em 0 .25em .375em;bord
 .post-footer{background-image:linear-gradient(rgba(0,0,0,0),rgba(24,24,24,.05));}
 </style>
 
-<style id='aoi-css-parts'>
+/* $aoi-css-parts */
 /* ドラッグスクロール */
 .aoi-dragscroll{overflow-x:scroll!important;scrollbar-width:none;-ms-overflow-style:none;}
 .aoi-dragscroll::-webkit-scrollbar{display:none;}
@@ -106,7 +106,10 @@ iframe[src*=&quot;//ext.nicovideo.jp/&quot;]{border:solid 1px #ccc;width:312px;h
 }
 
 
-/* アイコン */
-.icon_new{display:inline-block;margin:0 1px -1px 1px;width:32px;height:12px;background-image:url(&quot;//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6syhyphenhyphenD7W0sHp_GwVvivbGImrvuur9PYpkwXxeOJab0Op9zxom2keI8mPvWwpwF4JlaA0LDjNr8aew64I-lAJkHdgQvvbxgbIBPresDJpDuEzLJLQJW2vjCfsBvL7UAN3_HVQEqFrYcovB9MN3zC4Anc6BOAzqU93jUJt48hxmCGQB-7j4SGxGO9FP7WQ/s1600-rw/icon_new.gif&quot;);}
-.icon_push{display:inline-block;margin:0 1px 0 1px;width:27px;height:10px;background-image:url(&quot;//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEr5YH0hkHTmFxy9stHWHPxjKgExsY9w4fwI6v0fvvEugoKrJUsKN6HzNXmLjOUTRiKqueRZ7zFdNtmqxxLHblXZEa4rYQCys2u434G_XFI5kWYj-tjzYhi3G5dO0WXnVgY6dRTbgRnZdvlP4kjxuMvKuomtz-UcnSBkp_ZwhweSNNfU2MZdhZj8Gk3NI/s1600-rw/icon_push.gif&quot;);}
-.icon_check{display:inline-block;margin:0 2px 1px 0;width:20px;height:7px;background-image:url(&quot;//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPNPZ6lhm8sJN33rNJyJTA4bwDQHVX988MOJGlD8HWZewRl_f9TsSmuMxZZa3W-EFaNmoLPZKqwPiGFbd0uJ2BbSuXgwRHHURHkR_lIW0lhg6hqxLLFJRO6Xph4sfVH0WKdAj3veh3s9W-GU-YwkGudKvLd4LTQgOTdYIrJ-eYI8Jzg8FPUOHsUxy_SZA/s1600-rw/icon_check.gif&quot;);}
+/* $アイコン */
+[class*=icon_]{display:inline-block;margin:0 0 0 0;}
+.icon_new{margin:0 1px -1px 1px;width:32px;height:12px;background-image:url("//mabechinr.github.io/mabechinr/assets/icon/icon_new.gif");}
+.icon_push{margin:0 1px 0 1px;width:27px;height:10px;background-image:url("//mabechinr.github.io/mabechinr/assets/icon/icon_push.gif");}
+.icon_check{margin:0 2px 1px 0;width:20px;height:7px;background-image:url("//mabechinr.github.io/mabechinr/assets/icon/icon_check.gif");}
+
+.icon_openutau{width:16px;height:16px;background-image:url("//mabechinr.github.io/mabechinr/assets/icon/openutau_icon.svg");}
