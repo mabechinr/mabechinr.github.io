@@ -1,50 +1,176 @@
 /* $setconf */
 :root{
-  --base-font-size:10pt;
-  --base-font-family:"Helvetica Neue","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","Noto Sans JP","Segoe UI",Meiryo,メイリオ,sans-serif;
-  --base-line-height:1.3;
-  --profile-image:url("//mabechinr.github.io/assets/icon/aoi.png"),url("/favicon.ico");
+	--base-font-size:10pt;
+	--base-font-family:"Helvetica Neue","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","Noto Sans JP","Segoe UI",Meiryo,メイリオ,sans-serif;
+	--base-line-height:1.55;
+	--profile-image:url("//mabechinr.github.io/assets/icon/aoi.png"),url("/favicon.ico");
 
-  --header-text-color:#3069bf;
-  --header-text-size:24pt;
-  --m-header-text-size:18pt;
-  --header-text-color:#1d7ccc;
-  
-  --content-font-size:1.1em;
-  
-  --content-head-text-color:#336fcc;
-  --content-head-margin:1.75em 0 .25em;
-  --content-h1-font-size:2.25em;
-  --content-h2-font-size:2em;
-  --content-h3-font-size:1.75em;
-  --content-h4-font-size:1.4em;
-  --content-h5-font-size:1.2em;
-  --content-h6-font-size:1.05em;
+	--key-color:#b1d0fc;
+
+	--body-bg-color:#679be6;
+	--body-bg-gradient-cap:url(https://resources.blogblog.com/blogblog/data/1kt/simple/gradients_light.png);
+	--content-bg-color:#fff;
+	--header-bg-color:transparent;
+	--header-bg-gradient:none;
+
+	--body-text-color:#4e4e4e;
+	--date-header-color:var(--body-text-color);
+
+	--link-color:#2569d2;
+	--link-visited-color:#86a;
+	--link-hover-color:#408bff;
+
+	--content-shadow-spread:2em;
+
+	--header-text-color:#3069bf;
+	--header-text-size:24pt;
+	--m-header-text-size:18pt;
+	--header-text-color:#1d7ccc;
+	--header-description-text-size:1.1em;
+	--m-header-description-text-size:1em;
+	--header-description-text-color:#808080;
+	--header-shadow-offset:-1px -1px;
+	--header-shadow-spread:1px;
+	--header-padding:2em;
+
+	--tabs-text-color:#888;
+	--tabs-text-color-selected:#000;
+
+	--content-font-size:1.1em;
+	--content-padding:.75em;
+
+	--content-heading-accent-color:#9ec5fc;
+	--content-heading-accent-color-c2:#dae6f9;
+	--content-heading-background:linear-gradient(to right,rgba(158,196,252,.25) 25%,transparent);
+	--content-heading-background-c2:#185dbf linear-gradient(rgba(168,192,224,.25) 25%,transparent 50%) no-repeat;
+	--content-heading-color:#4d5766;
+	--content-heading-color-c2:#fff;
+
+	--content-h1-font-size:1.35em;
+	--content-h2-font-size:1.2em;
+	--content-h3-font-size:1.15em;
+	--content-h4-font-size:1.1em;
+	--content-h5-font-size:1.05em;
+	--content-h6-font-size:.95em;
+
+	--main-padding-top:1.25rem;
+	--main-padding-bottom:1.75rem;
+
+	--content-line-height:var(--base-line-height);
+	--post-margin-bottom:2rem;
+
+	--content-image-background:#fff;
+	--content-image-border:1px solid #eee;
+	--content-image-text-color:var(--body-text-color);
+	--content-image-padding-small:2px;
+	--content-image-padding-large:5px;
+
+	--post-footer-text-color:#727272;
+	--post-footer-background:#fbfbfb;
 }
 
+/* Content
+----------------------------------------------- */
+:root,body{line-height:var(--base-line-height);font-family:var(--base-font-family);font-size:var(--base-font-size);}
 
-/* body */
-body{font-size:var(--base-font-size);line-height:var(--base-line-height);font-family:var(--base-font-family);}
+body{color:var(--body-text-color);background-color:var(--body-bg-color);padding:0 var(--content-shadow-spread) var(--content-shadow-spread);min-width:auto;}
+
+/* a */
+a:link{color:var(--link-color);text-decoration:none;}
+a:visited{color:var(--link-visited-color);text-decoration:none;}
+a:hover{color:var(--link-hover-color);text-decoration:underline;}
+
+/* .content .content-outer */
+.content-outer{box-shadow:0 0 var(--content-shadow-spread) rgba(0,0,0,.15);margin-bottom:1px;}
+
+/* .content .content-inner */
+.content-inner{padding:var(--content-padding) 0;background-color:var(--content-bg-color);}
 
 /* ヘッダー アイコン */
 .header-title-img{display:inline-block;margin:-.25em 0 -.375em;width:1.5em;height:1.5em;background:no-repeat 50%;background-size:contain;background-image:var(--profile-image);}
 
+
+/* Header
+----------------------------------------------- */
 /* 記事一覧 記事 */
 .date-outer{margin:1em 0;}
 
 /* 見出し 日付 */
 .date-header span{font-size:1.15em;}
-/* 見出し タイトル */
-h3.post-title,.comments h4{margin:.25em -4px 0;padding:.25em 0 .25em .375em;border-left:4px solid #a0c4fc;background-image:linear-gradient(to right,rgba(160,196,252,.25) 25%,transparent);font-size:1.75em;font-family:var(--base-font-family);font-weight:normal;line-height:1.25;}
 
 /* 本文 見出し */
 .post-body h1,.post-body h2,.post-body h3,.post-body h4{margin-top:1.75em;color:#4d5766;}
+.post-body h1{font-size:var(--content-h1-font-size);}
+.post-body h2{font-size:var(--content-h2-font-size);}
+.post-body h3{font-size:var(--content-h3-font-size);}
+.post-body h4{font-size:var(--content-h4-font-size);}
+.post-body h5{font-size:var(--content-h5-font-size);}
+.post-body h6{font-size:var(--content-h6-font-size);}
+
+/* 記事 見出し */h3.post-title,.comments h4,
+.post-body h1,.post-body h2,.post-body h3,.post-body h4,.post-body h5,.post-body h6{
+margin:1.5rem -.375rem .375rem;padding:.275rem 0 .2rem 1.1rem;
+background:var(--content-heading-background);border-bottom:2px solid var(--content-heading-accent-color);
+color:var(--content-heading-color);font-family:var(--base-font-family);font-weight:normal;line-height:1.25;
+}
+
+/* 記事 見出し */
+h3.post-title,.comments h4{
+padding:.3rem 0 .3rem 1.1rem!important;border:none!important;font-size:1.75em;}
+
+/* 記事 見出し(リンク効果を除去) */
+h3.post-title,.comments h4,
+h3.post-title a,h3.post-title a:link,h3.post-title a:visited,h3.post-title a:hover{
+text-decoration:none;color:var(--content-heading-color);}
+
+/* 本文 見出し(濃い色) */.post-body h2,.post-body h4,.post-body h6{
+background:var(--content-heading-background-c2);color:var(--content-heading-color-c2);font-weight:bold;}
+
+/* 記事 見出し:after */h3.post-title:after,.comments h4:after,
+/* 本文 見出し:after */.post-body h1:after,.post-body h2:after,.post-body h3:after,.post-body h4:after,.post-body h5:after,.post-body h6:after{
+content:"";display:block;position:absolute;top:.25rem;bottom:.2rem;left:.375rem;border-left:.25rem solid var(--content-heading-accent-color);}
+
+/* 記事 見出し:after スタイル変更 */h3.post-title:after,.comments h4:after{
+top:0;bottom:0;left:0;border-left-width:.625rem;}
+
+/* 本文 見出し(濃い色):after */.post-body h2:after,.post-body h4:after,.post-body h6:after{
+border-color:var(--content-heading-accent-color-c2)!important;}
+
+/* 本文 見出し(小):after */
+.post-body h4:after,.post-body h5:after{border-style:dotted!important;}
+
+/* 本文 見出し(余白調整) */
 .post-body :nth-child(1){margin-top:.25em;}
+
 /* 本文 見出し + p */
 .post-body h1 + p,.post-body h2 + p,.post-body h3 + p,.post-body h4 + p{margin-top:0;}
 
+
+/* Posts
+----------------------------------------------- */
+/* main padding */
+.main-inner{padding:var(--main-padding-top) 0 var(--main-padding-bottom);}
+
+/* main 中央カラム padding */
+.main-inner .column-center-inner{padding:0 1rem;}
+
+/* 記事 */
+.post{margin:0 0 var(--post-margin-bottom) 0;}
+.post-body{font-size:var(--content-font-size);line-height:var(--content-line-height);position:relative;}
+
+/* 記事 header */
+.post-header{margin:0 0 1.5em;line-height:var(--content-line-height);font-size:90%;}
+
 /* 記事 footer */
-.post-footer{background-image:linear-gradient(rgba(0,0,0,0),rgba(24,24,24,.05));}
+.post-footer{
+margin:2em -2px 0;
+padding:.5em 1em;
+color:var(--post-footer-text-color);
+background:var(--post-footer-background);
+background-image:linear-gradient(rgba(0,0,0,0),rgba(24,24,24,.05));
+line-height:1.5;
+font-size:90%;
+}
 
 
 /* $aoi-css-parts */
@@ -54,7 +180,7 @@ h3.post-title,.comments h4{margin:.25em -4px 0;padding:.25em 0 .25em .375em;bord
 
 /* ノート */
 .post-body .note{display:inline-block;background:rgb(232,239,249);border:2px dotted rgb(204,204,204);margin:.5em .25em;padding:1em;border-radius:8px;}
-  
+
 /* button */
 .button{border-radius:4px;display:block;font-size:1.15em;font-weight:bold;height:1.75em;line-height:1.75;margin:.75em auto;padding-top:.075em;max-width:460px;text-align:center;width:90%;background-image:linear-gradient(rgba(24,24,24,.025),rgba(24,24,24,.075));color:#404040;}
 /* submit */
@@ -78,37 +204,71 @@ iframe[src*="//ext.nicovideo.jp/"]{border:solid 1px #ccc;width:312px;height:172p
 
 /* $レスポンシブ */
 @media (max-width:1080px){
-  body{min-width:auto;}
+body{min-width:auto;}
 }
 
 @media (max-width:1023px){
-  .main-inner .columns{padding-right:0;}
-  .main-inner .fauxcolumn-center-outer{right:0;}
-  .main-inner .column-center-inner{padding:0 .75em;}
-  .main-inner .column-right-outer{width:auto;margin-right:0;}
-  .main-inner .fauxcolumn-right-outer{width:0;}
+.main-inner .columns{padding-right:0;}
+.main-inner .fauxcolumn-center-outer{right:0;}
+.main-inner .column-center-inner{padding:0 .75em;}
+.main-inner .column-right-outer{width:auto;margin-right:0;}
+.main-inner .fauxcolumn-right-outer{width:0;}
 }
 
 @media (max-width:800px){
-  body{padding:0 1.5em 1.5em;}
-  .content-inner{padding-top:.5em;}
-  .main-inner .column-center-inner{padding:0 .5em;}
+body{padding:0 1.5em 1.5em;}
+.content-inner{padding-top:.5em;}
+.main-inner .column-center-inner{padding:0 .5em;}
 }
 
 @media (max-width:640px){
-  body{padding:0 1em 1.25em;}
-  .main-inner .column-center-inner{padding:0 .5em;}
-  .section{margin:0 .75em;}
+body{padding:0 1em 1.25em;}
+.main-inner .column-center-inner{padding:0 .5em;}
+.section{margin:0 .75em;}
 }
 
 @media (max-width:560px){
-  body{padding:0 .5em 1em;}
-  .main-inner .column-center-inner{padding:0 .5em;}
+body{padding:0 .5em 1em;}
+.main-inner .column-center-inner{padding:0 .5em;}
 }
 
 
+/* $シェアボタン */
+.post-share-buttons{font-size:0;}
+.share-button{width:2.25rem;height:2.25rem;background-image:none!important;background-color:#f8f8f8;border:solid 1px #bbb;margin-right:.625rem;border-radius:50%;box-shadow:1px 1px 4px 0 rgba(0,0,0,.125),1px 2px 4px -2px rgba(32,32,32,.125);}
+.share-button:hover{border-color:#787878;background-color:#fff;transform:scale(1.125);}
+.share-button:active{background-color:#eee;}
+.share-button:last-child{margin-right:0;}
+
+.share-button-link-text{width:1.25rem;height:1.25rem;margin:.5rem;background-image:url(data:image/svg+xml,%3csvg/%3e);background-repeat:no-repeat;background-position:50%;background-size:100% auto;}
+
+/* メール */
+.share-button.sb-email{background-color:#777!important;}
+.share-button.sb-email .share-button-link-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4OCA2NiIgZmlsbD0iI2ZmZiI+PHBhdGggZD0ibTguNDMgMC4wMDM5MWMtNC40MyAwLjMwMi04LjQzIDMuODktOC40MyA5djUxYzAgMy4zMiAyLjY5IDYgNiA2aDE0di0zNGwyNCAxOCAyNC0xOHYzNGgxNGMzLjMyIDAgNi0yLjY5IDYtNnYtNTFjMC03LjQyLTguNDctMTEuNi0xNC40LTcuMmwtMjkuNiAyMi4yLTI5LjYtMjIuMmMtMS44Ni0xLjM5LTMuOTYtMS45My01Ljk3LTEuOHoiLz48L3N2Zz4=");}
+
+/* Blogger */
+.share-button.sb-blog{background-color:#f57c00!important;}
+.share-button.sb-blog .share-button-link-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjAgNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTQxIDYwYzEwLjUgMCAxOS04LjQ3IDE5LTE5di0xNS41YzAtMS4zOC0xLjEyLTIuNS0yLjUtMi41aC00LjVjLTIuMjIgMC00LTEuNzgtNC00IDAtMTAuNS04LjQ3LTE5LTE5LTE5aC0xMWMtMTAuNSAwLTE5IDguNDctMTkgMTl2MjJjMCAxMC41IDguNDcgMTkgMTkgMTltMC4yNS0zNy41Yy0xLjggMC0zLjI1LTEuNDUtMy4yNS0zLjI1czEuNDUtMy4yNSAzLjI1LTMuMjVoMTAuNWMxLjggMCAzLjI1IDEuNDUgMy4yNSAzLjI1cy0xLjQ1IDMuMjUtMy4yNSAzLjI1bS0xMC41IDIxLjVjLTEuOCAwLTMuMjUtMS40NS0zLjI1LTMuMjVzMS40NS0zLjI1IDMuMjUtMy4yNWgyMS41YzEuOCAwIDMuMjUgMS40NSAzLjI1IDMuMjVzLTEuNDUgMy4yNS0zLjI1IDMuMjUiIGZpbGw9IiNmZmYiLz48L3N2Zz4=");}
+
+/* X */
+.share-button.sb-twitter{background-color:#000!important;}
+.share-button.sb-twitter .share-button-link-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTE0LjI1OCAxMC4xNTJMMjMuMTc2IDBoLTIuMTEzbC03Ljc0NyA4LjgxM0w3LjEzMyAwSDBsOS4zNTIgMTMuMzI4TDAgMjMuOTczaDIuMTEzbDguMTc2LTkuMzA5IDYuNTMxIDkuMzA5aDcuMTMzem0tMi44OTUgMy4yOTNsLS45NDktMS4zMjhMMi44NzUgMS41NmgzLjI0Nmw2LjA4NiA4LjUyMy45NDUgMS4zMjggNy45MSAxMS4wNzhoLTMuMjQ2em0wIi8+PC9zdmc+");}
+
+/* Facebook */
+.share-button.sb-facebook{background-color:#365899!important;}
+.share-button.sb-facebook .share-button-link-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTg1LjMgMjU2VjEzOS4yM2gzOS4ybDUuODYtNDUuNTFIMTg1LjNWNjQuNjZjMC0xMy4xNyAzLjY2LTIyLjE2IDIyLjU1LTIyLjE2aDI0LjFWMS44Yy00LjE3LS41NS0xOC40Ny0xLjgtMzUuMTItMS44LTM0Ljc0IDAtNTguNTMgMjEuMjEtNTguNTMgNjAuMTZ2MzMuNTZIOTl2NDUuNTFoMzkuM1YyNTYiLz48L3N2Zz4=");background-position:-.1rem 0;}
+
+/* Pinterest */
+.share-button.sb-pinterest{background-color:#e60023!important;}
+.share-button.sb-pinterest .share-button-link-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTAgMTJhMTIgMTIgMCAwIDAgNy43MyAxMS4yMiAxMiAxMiAwIDAgMSAuMDMtMy41N2wxLjQtNS45NFM4LjggMTMgOC44IDExLjk0YzAtMS42Ni45Ni0yLjkgMi4xNi0yLjkgMS4wMiAwIDEuNTEuNzcgMS41MSAxLjY4IDAgMS4wMy0uNjUgMi41Ni0uOTkgMy45OC0uMjggMS4xOS42IDIuMTYgMS43NyAyLjE2IDIuMTIgMCAzLjc2LTIuMjQgMy43Ni01LjQ3IDAtMi44Ni0yLjA2LTQuODYtNS00Ljg2YTUuMTcgNS4xNyAwIDAgMC01LjM5IDUuMThjMCAxLjAzLjQgMi4xMy45IDIuNzNxLjEyLjE3LjA4LjM0bC0uMzQgMS4zNnEtLjA2LjMxLS40LjE2Yy0xLjQ5LS43LTIuNDItMi44OC0yLjQyLTQuNjMgMC0zLjc3IDIuNzQtNy4yMyA3LjktNy4yMyA0LjE0IDAgNy4zNiAyLjk1IDcuMzYgNi45IDAgNC4xMi0yLjYgNy40My02LjIgNy40My0xLjIxIDAtMi4zNS0uNjMtMi43NC0xLjM3bC0uNzQgMi44NGExNCAxNCAwIDAgMS0xLjU1IDMuMjNBMTIgMTIgMCAxIDAgMCAxMiIvPjwvc3ZnPg==");}
+
+/* Bluesky */
+.share-button.sb-bsky{background-color:#1083fe!important;}
+.share-button.sb-bsky .share-button-link-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiIHZpZXdCb3g9IjAgMCA2NCA1NyI+PHBhdGggZD0iTTEzLjg3MyAzLjgwNUMyMS4yMSA5LjMzMiAyOS4xMDMgMjAuNTM3IDMyIDI2LjU1djE1Ljg4MmMwLS4zMzgtLjEzLjA0NC0uNDEuODY3LTEuNTEyIDQuNDU2LTcuNDE4IDIxLjg0Ny0yMC45MjMgNy45NDQtNy4xMTEtNy4zMi0zLjgxOS0xNC42NCA5LjEyNS0xNi44NS03LjQwNSAxLjI2NC0xNS43My0uODI1LTE4LjAxNC05LjAxNUMxLjEyIDIzLjAyMiAwIDguNTEgMCA2LjU1IDAtMy4yNjggOC41NzktLjE4MiAxMy44NzMgMy44MDVaTTUwLjEyNyAzLjgwNUM0Mi43OSA5LjMzMiAzNC44OTcgMjAuNTM3IDMyIDI2LjU1djE1Ljg4MmMwLS4zMzguMTMuMDQ0LjQxLjg2NyAxLjUxMiA0LjQ1NiA3LjQxOCAyMS44NDcgMjAuOTIzIDcuOTQ0IDcuMTExLTcuMzIgMy44MTktMTQuNjQtOS4xMjUtMTYuODUgNy40MDUgMS4yNjQgMTUuNzMtLjgyNSAxOC4wMTQtOS4wMTVDNjIuODggMjMuMDIyIDY0IDguNTEgNjQgNi41NWMwLTkuODE4LTguNTc4LTYuNzMyLTEzLjg3My0yLjc0NVoiLz48L3N2Zz4=");background-position:0 .125rem;}
+
+
 /* $アイコン */
-[class*=icon_]{display:inline-block;width:16px;height:16px;margin:0 0 -2px 0;background-size:100% 100%;}
+[class*=icon_]{display:inline-block;width:1.5em;height:1.5em;margin:0 0 -.375em 0;background-size:100% 100%;}
 .icon_new{margin:2px 1px 0 1px;width:32px;height:12px;background-image:url("//mabechinr.github.io/assets/icon/icon_new.gif");}
 .icon_push{margin:0 1px 2px 1px;width:26px;height:9px;background-image:url("//mabechinr.github.io/assets/icon/icon_push.gif");}
 .icon_check{margin:0 2px 2px 0;width:20px;height:7px;background-image:url("//mabechinr.github.io/assets/icon/icon_check.gif");}
