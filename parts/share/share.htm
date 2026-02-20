@@ -1,0 +1,68 @@
+<!doctype html><html><meta charset="UTF-8"><title>共有する...</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="/assets/js/qrcode.min.js"></script>
+<link href='/assets/css/blogger_aoi.css' id='aoi-git-css' rel='stylesheet'>
+<style>
+/* import blogger-style */
+body{margin:30px 0 0;background-image:linear-gradient(rgba(255,255,255,.6),rgba(255,255,255,.6));}
+body.min{margin:0;padding:0;}
+.content{background-color:#fff;}
+.section{margin:0 1em;}
+.post-body :nth-child(1){margin-top:0;}
+
+/* display mode */
+.qronly{.main-inner,.main-inner .column-center-inner{padding:0;}
+.content-outer,.section{margin:0;}
+h1{display:none;}
+}
+
+/* inputform */
+#FomEl{margin:.75em 0;display:none;}
+#FomEl,#FomEl input{height:2em;box-sizing:border-box;}
+#FomEl input[type="text"]{width:calc(100% - 3.75em);}
+#FomEl input[type="button"]{width:3.5em;margin-left:-3.5em;float:right;}
+
+/* QR size */
+:root{--qr-size:128px;--qr-margin:16px;--qr-outersize:calc(var(--qr-size) + var(--qr-margin) * 2);--qr-innersize:calc(var(--qr-size) * 2);}
+.qr-container{display:inline-block;width:var(--qr-outersize);height:var(--qr-outersize);background-color:#fff;overflow:hidden;}
+#QR{display:inline-block;width:var(--qr-size);height:var(--qr-size);padding:var(--qr-margin);}
+#QR > *{width:var(--qr-innersize);height:var(--qr-innersize);transform:scale(.5);margin:calc(var(--qr-size) / -2);}
+</style>
+<body>
+	<div class="content"><div class="content-outer main-inner"><div class="column-center-inner"><div class="main section post-body">
+		<h1 class="post-title" onclick="createQR()" onContextmenu="openPanel();return false">共有する...</h1>
+			<div id="FomEl"><input type="text" id="TxtEl" placeholder="ここに文字列を入力"><input type="button" onclick="createQR()" value="QR"></div>
+			<div class="qr-container"><div id="QR"></div></div></div></div></div>
+	<script>
+		var shareText=document.getElementById('TxtEl');
+		var getQuery={};var P=location.search.substring(1).split('&');for(var i=0;P[i];i++){var A=P[i].split('=');getQuery[A[0]]=A[1];}
+		
+		function openPanel(){document.getElementById('FomEl').style.display="block";}
+		
+		function createQR(){
+			if(shareText.value===""){openPanel();document.getElementById('QR').innerHTML='<div style="font-size:2em">内容が無いよう</div>';}else{
+				// QRコード要素を初期化
+				document.getElementById('QR').textContent='';
+				// QRコード生成
+				var qrcode=new QRCode('QR',{
+					text:shareText.value,
+					width:400,
+					height:400,
+					correctLevel:QRCode.CorrectLevel.M
+				});
+			}
+		}// /createQR()
+		
+		window.addEventListener('load',function(){
+			// 表示モード
+			if(getQuery.d=="m"){document.body.classList.add("min");}
+			if(getQuery.d=="q"){document.body.classList.add("min","qronly");}
+			// URLから共有内容を取得
+			if(getQuery.q){shareText.value=decodeURIComponent(getQuery.q);}else{console.warn("内容が無いよう");}
+			if(shareText.value===""){openPanel();}
+			// QRコード生成
+			createQR();
+		});
+	</script>
+</body> 
+</html>
